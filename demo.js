@@ -26,14 +26,27 @@
 //console.log(items);
 //items[1].textContent='Hello 2';
 //console.log(items[2]);
-var items=document.querySelectorAll('.list-group-item');
-console.log(items);
-items[2].style.backgroundColor ="green";
+//var items=document.querySelectorAll('.list-group-item');
+//console.log(items);
+//items[2].style.backgroundColor ="green";
 
 //Gives error
 //items.style.fontWeight='bold';
 
-for(var i=0; i<items.length;i++)
+//for(var i=0; i<items.length;i++)
+//{
+  //  items[i].style.fontWeight='bold';
+//}
+
+
+//GETELEMENTBYTAGNAME//
+
+var li=document.getElementsByTagName('li');
+console.log(li);
+li[1].textContent='hello';
+li[1].style.backgroundColor='yellow';
+
+for(var i=0;i<li.length;i++)
 {
-    items[i].style.fontWeight='bold';
+    li[i].style.fontWeight='bold';
 }
