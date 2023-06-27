@@ -71,18 +71,115 @@
 
 //QUERYSELECTORALL//
 
-var titles = document.querySelectorAll('.title');
-console.log(titles);
-titles[0].textContent='hello';
+//var titles = document.querySelectorAll('.title');
+//console.log(titles);
+//titles[0].textContent='hello';
 
-var secondList = document.querySelectorAll('.list-group-item');
+//var secondList = document.querySelectorAll('.list-group-item');
 
-secondList[1].style.color = 'green';
-var odd = document.querySelectorAll('li:nth-child(odd)');
+//secondList[1].style.color = 'green';
+//var odd = document.querySelectorAll('li:nth-child(odd)');
 //var even = document.querySelectorAll('li:nth-child(even)');
-for(var i = 0; i < odd.length; i++)
-{
-   odd[i].style.backgroundColor = 'green';
+//for(var i = 0; i < odd.length; i++)
+//{
+  // odd[i].style.backgroundColor = 'green';
    // even[i].style.backgroundColor = '#ccc';
-}
+//}
 
+
+//TRAVERSING THE DOM//
+
+var itemList = document.querySelector('#items');
+//parentNode
+//console.log(itemList.parentNode);
+//itemList.parentNode.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentNode.parentNode.parentNode);
+
+
+//parentElement//
+//console.log(itemList.parentElement);
+//itemList.parentElement.style.backgroundColor = '#f4f4f4';
+//console.log(itemList.parentElement.parentElement.parentElement);
+
+//childNodes//
+
+//console.log(itemList.childNodes);
+
+//console.log(itemList.children);
+//console.log(itemList.children[1]);
+//itemList.children[1].style.backgroundColor = 'red';
+
+//firstChild//
+//console.log(itemList.firstChild);
+
+//firstElementChild//
+
+//console.log(itemList.firstElementChild);
+//itemList.firstElementChild.textContent = 'Hello';
+
+//lastChild//
+
+//console.log(itemList.lastChild);
+
+//lastElementChild//
+
+//console.log(itemList.lastElementChild);
+//itemList.lastElementChild.textContent = 'goodbye';
+
+//nextsibling//
+
+//console.log(itemList.nextSibling);
+
+//nextElementSibling//
+
+//console.log(itemList.nextElementSibling);
+
+//previoussibling//
+
+//console.log(itemList.previousSibling);
+
+//previousElementsiblings//
+
+//console.log(itemList.previousElementSibling);
+
+//createElement//
+
+//create a div
+
+var newDiv = document.createElement('div');
+
+//add class
+
+newDiv.className = 'hello';
+
+//add id
+
+newDiv.id = 'hello1';
+
+//add attribute
+
+newDiv.setAttribute('title', 'hello div');
+
+//create text node
+
+var newDivText = document.createTextNode('Hello World');
+
+//add text to div
+
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+var listGroup = document.querySelector('.list-group');
+var list = document.querySelectorAll('.list-group-item');
+//var h2 = document.querySelectorAll('h2');
+console.log(list[0]);
+//console.log(li);
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv, h1);
+listGroup.insertBefore(newDiv, list[0]);
